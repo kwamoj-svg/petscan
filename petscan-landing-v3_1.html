@@ -1,1 +1,74 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>PetScan Landing Page</title>\n    <link rel="stylesheet" href="styles.css">\n</head>\n<body>\n    <nav>\n        <ul>\n            <li><a href="#hero">Home</a></li>\n            <li><a href="#problem">Problem</a></li>\n            <li><a href="#how-it-works">How It Works</a></li>\n            <li><a href="#features">Features</a></li>\n            <li><a href="#stats">Stats</a></li>\n            <li><a href="#pricing">Pricing</a></li>\n            <li><a href="#faq">FAQ</a></li>\n            <li><a href="#footer">Contact</a></li>\n        </ul>\n    </nav>\n    <section id="hero">\n        <h1>Welcome to PetScan</h1>\n        <p>Your pet's health matters!</p>\n        <button id="google-sign-in">Sign in with Google</button>\n        <form id="email-registration">\n            <input type="email" placeholder="Enter your email" required>\n            <button type="submit">Register</button>\n        </form>\n    </section>\n    <section id="problem">\n        <h2>The Problem</h2>\n        <p>Many pets face health issues...</p>\n    </section>\n    <section id="how-it-works">\n        <h2>How It Works</h2>\n        <p>We help you track your pet's health...</p>\n    </section>\n    <section id="features">\n        <h2>Features</h2>\n        <ul>\n            <li>Track health data</li>\n            <li>Connect with vets</li>\n            <li>Community support</li>\n        </ul>\n    </section>\n    <section id="stats">\n        <h2>Stats</h2>\n        <p>Over 1,000 registered pets!</p>\n    </section>\n    <section id="pricing">\n        <h2>Pricing</h2>\n        <p>Affordable plans for everyone!</p>\n    </section>\n    <section id="faq">\n        <h2>FAQ</h2>\n        <div class="faq-item">\n            <h3 class="faq-question">What is PetScan?</h3>\n            <div class="faq-answer" style="display:none;">PetScan is a health tracking app for pets...</div>\n        </div>\n        <script>\n            document.querySelectorAll('.faq-question').forEach(item => {\n                item.addEventListener('click', () => {\n                    const answer = item.nextElementSibling;\n                    answer.style.display = answer.style.display === 'none' ? 'block' : 'none';\n                });\n            });\n            document.getElementById('google-sign-in').addEventListener('click', function() {\n                // Google Sign-In functionality here\n            });\n            document.getElementById('email-registration').addEventListener('submit', function(e) {\n                e.preventDefault();\n                // Handle email registration here\n            });\n        </script>\n    </section>\n    <footer id="footer">\n        <p>&copy; 2026 PetScan. All rights reserved.</p>\n    </footer>\n    <script>\n        // Smooth scrolling functionality\n        const links = document.querySelectorAll('nav ul li a');\n        links.forEach(link => {\n            link.addEventListener('click', function(e) {\n                e.preventDefault();\n                const targetId = this.getAttribute('href').substring(1);\n                const targetSection = document.getElementById(targetId);\n                targetSection.scrollIntoView({ behavior: 'smooth' });\n            });\n        });\n    </script>\n</body>\n</html>\n
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petscan Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="animations.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Willkommen bei Petscan</h1>
+        <nav>
+            <ul>
+                <li><a href="#features">Funktionen</a></li>
+                <li><a href="#pricing">Preise</a></li>
+                <li><a href="#faq">Häufige Fragen</a></li>
+                <li><a href="#signin">Anmelden</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <h2>Erleben Sie die Zukunft der Gesundheitsüberwachung</h2>
+        <button id="start-button">Jetzt starten</button>
+    </section>
+    <section id="features">
+        <h2>Funktionen</h2>
+        <ul>
+            <li>Echtzeit-Datenanalyse</li>
+            <li>Benutzerfreundliche Schnittstelle</li>
+            <li>Erweiterte X-ray Visualisierung</li>
+        </ul>
+    </section>
+    <section id="pricing">
+        <h2>Preise</h2>
+        <table>
+            <tr>
+                <th>Plan</th>
+                <th>Preis</th>
+            </tr>
+            <tr>
+                <td>Basis</td>
+                <td>€9.99/Monat</td>
+            </tr>
+            <tr>
+                <td>Pro</td>
+                <td>€19.99/Monat</td>
+            </tr>
+        </table>
+    </section>
+    <section id="faq">
+        <h2>Häufige Fragen</h2>
+        <dl>
+            <dt>Wie melde ich mich an?</dt>
+            <dd>Besuchen Sie die Anmeldeseite und folgen Sie den Anweisungen.</dd>
+            <dt>Welche Zahlungsmethoden akzeptieren Sie?</dt>
+            <dd>Wir akzeptieren Kreditkarten und PayPal.</dd>
+        </dl>
+    </section>
+    <section id="signin">
+        <h2>Anmelden</h2>
+        <form>
+            <label for="username">Benutzername:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Anmelden</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2026 Petscan. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
